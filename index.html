@@ -4,11 +4,31 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PlatziMovies</title>
+    <link rel="shorcut icon" href="/favicon.svg" type="image/svg+xml">
+    <title>PlatziMovies Heider</title>
   </head>
   <body>
     
-    <h1>PlatzieMovies</h1>
+    <!-- HEADER -->
+
+    <header class="header">
+      <a href="./index.html" class="logo">
+        <img src="/public/assets/logoCinema.jpg" width="100px" height="20px" alt="Cinema Home">
+      </a>
+
+      <div class="search-box" search-box>
+        <div class="search-wrapper" search-wrapper>
+          <input type="text" name="search" aria-label="search movies"
+           placeholder="Search any movies..." class="input-field">
+
+          <img src="/public/assets/search.png" width="24px" height="24px" alt="search"
+            class="leading-icon">
+            
+            
+        </div>
+      </div>
+
+    </header>
     
     <script src="/src/secretsApi.js"></script>
     <script type="module" src="/main.js"></script>
