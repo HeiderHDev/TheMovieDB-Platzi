@@ -27,25 +27,46 @@ export const getTrendingMoviesPreview = async () => {
             'https://image.tmdb.org/t/p/w300' + movie.poster_path
             );
 
-        
+        // Titulo 
+        const titleMovie = document.createElement('h4');
+        titleMovie.classList.add('title');
+        titleMovie.textContent = `${movie.title}`;
 
+        // Puntuacion de Pelicula y year
+        const starContainer = document.createElement('div');
+        starContainer.classList.add('meta-list');
+
+        const starItem = document.createElement('div');
+        starItem.classList.add('meta-item');
+
+        const starImg = document.createElement('img');
+        starImg.setAttribute('alt', 'rating');
+        starImg.setAttribute('loading', 'lazy');
+        starImg.setAttribute(
+            'src',
+            '/src/assets/star.png'
+        )
+        starImg.width = 24;
+        starImg.height = 24;
+
+        const starRating = document.createElement('span');
+        starRating.classList.add('span');
+        starRating.textContent = `${movie.vote_average}`;
+
+
+        const yearContainer = document.createElement('div');
+        yearContainer.classList.add('card-badge');
+        yearContainer.textContent = `${movie.release_date}`;
+
+        starItem.appendChild(starImg);
+        starItem.appendChild(starRating);
+        
         movieFigure.appendChild(movieImg);
-        movieContainer.appendChild(movieFigure, titleMovie);  
+        movieContainer.appendChild(movieFigure); 
+        movieContainer.appendChild(titleMovie);
+        movieContainer.appendChild(starItem);
+        movieContainer.appendChild(yearContainer);
         trendingPreviewMoviesContainer.appendChild(movieContainer);
     });
-
-    // movies.forEach(moviedata =>{
-
-    //     const movieContainer = document.createElement('div');
-    //     movieContainer.classList.add('movie-card');
-
-    //     const titleMovie = document.createElement('h4');
-    //     titleMovie.classList.add('title');
-    //     titleMovie.innerContent = moviedata.title;
-
-    //     movieContainer.appendChild(titleMovie);
-    //     trendingPreviewMoviesContainer.appendChild(movieContainer);
-
-    // });
 
 }

@@ -22,3 +22,5 @@ addEventonElements(searchTogglers, 'click', () =>{
     searchBox.classList.toggle('active');
 })
 
+
+
