@@ -437,7 +437,7 @@ body{
 
 .sidebar.active{
   /* transform: translateX(50px); */
-  transform: translateY(50px);
+  transform: translateY(0px);
   visibility: visible;
 }
 
