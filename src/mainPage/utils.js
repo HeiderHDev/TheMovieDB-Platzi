@@ -14,7 +14,7 @@ export function createMovies(movies, container){
         movieImg.setAttribute(
             'src',
             'https://image.tmdb.org/t/p/w300' + movie.poster_path
-            );
+            );   
 
         // Titulo 
         const titleMovie = document.createElement('h4');
@@ -46,21 +46,20 @@ export function createMovies(movies, container){
         yearContainer.classList.add('card-badge');
         yearContainer.textContent = `${movie.release_date}`;
 
-        starItem.appendChild(starImg);
-        starItem.appendChild(starRating);
-
         const linkCardBtn = document.createElement('a');
         linkCardBtn.classList.add('card-btn');
         linkCardBtn.setAttribute('href','/src/movie_details/movie-details.html');
         linkCardBtn.setAttribute('title', movie.title);
 
-        movieContainer.appendChild(linkCardBtn);
-
         movieFigure.appendChild(movieImg);
         movieContainer.appendChild(movieFigure);
         movieContainer.appendChild(titleMovie);
-        movieContainer.appendChild(starItem);
-        movieContainer.appendChild(yearContainer);
+        starContainer.appendChild(starItem);
+        movieContainer.appendChild(starContainer);
+        starItem.appendChild(starImg);
+        starItem.appendChild(starRating);
+        starContainer.appendChild(yearContainer);
+        movieContainer.appendChild(linkCardBtn);
         container.appendChild(movieContainer);
     });
     

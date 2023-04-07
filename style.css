@@ -875,7 +875,7 @@ body{
     grid-template-columns: 250px 1fr;
   }
 
-  /* .sidebar{
+  .sidebar{
     position: static;
     visibility: visible;
     border-block-start: 0;
@@ -889,7 +889,7 @@ body{
   .sidebar-list,
   .sidebar-footer{
     padding-inline: 56px;
-  } */
+  }
 
   .container{
     height: calc(100vh - 104px);

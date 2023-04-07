@@ -71,7 +71,7 @@ const addEventonElements = (elementos, TipodeEvento, callback) => {
   }
 };
 
-export const toggleSidebar = (toggleClass) => {
+export const toggleSidebar = () => {
   const sidebarBtn = document.querySelector("[menu-btn]");
   const sidebarTogglers = document.querySelectorAll("[menu-toggler]");
   const sidebarClose = document.querySelectorAll("[menu-close]");

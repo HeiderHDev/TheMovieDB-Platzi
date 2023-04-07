@@ -6,6 +6,7 @@ import { getTrendingMoviesPreview } from './src/mainPage/trending.js';
 import { getMoviesPopular } from './src/mainPage/moviesPopular.js';
 import { getUpcomingMoviesPreview } from './src/mainPage/UpcomingMovies.js';
 import { getTopRatedMoviesPreview } from './src/mainPage/topRatedMovies.js';
+import { search } from './src/searchbox/search.js';
 
 
 
@@ -16,6 +17,7 @@ toggleSidebar();
 getMoviesPopular();
 getUpcomingMoviesPreview();
 getTopRatedMoviesPreview();
+search();
 
 
 

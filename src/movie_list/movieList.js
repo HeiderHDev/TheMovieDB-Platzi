@@ -4,9 +4,11 @@ import categoria, {
   getCategoriesPreview,
   toggleSidebar,
 } from "../mainPage/categories-Sidebar.js";
+import { search } from "../searchbox/search.js";
 
 getCategoriesPreview();
 toggleSidebar();
+search();
 
 let currentPage = 1;
 let totalPages = 0;

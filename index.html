@@ -42,196 +42,199 @@
 
   </header>
 
-  <!-- SIDEBAR -->
 
-  <nav class="sidebar" sidebar>
-    <div class="sidebar-inner">
-      <div class="sidebar-list" id="sidebar-list2">
-        <p class="title">Género</p>
-        <!-- <div class="list-container">
-          <a href="/src/movie_list/movie-list.html" menu-close 
-          class="sidebar-link">Acción</a>
-        </div> -->
+  <main>
+
+    <!-- SIDEBAR -->
+
+    <nav class="sidebar" sidebar>
+      <div class="sidebar-inner">
+        <div class="sidebar-list" id="sidebar-list2">
+          <p class="title">Género</p>
+          <!-- <div class="list-container">
+        <a href="/src/movie_list/movie-list.html" menu-close 
+        class="sidebar-link">Acción</a>
+      </div> -->
+
+        </div>
+
+        <div class="sidebar-list">
+          <p class="title">Lenguaje</p>
+          <a href="/src/movie_list/movie-list.html" menu-close class="sidebar-link">Español</a>
+          <a href="/src/movie_list/movie-list.html" menu-close class="sidebar-link">Ingles</a>
+          <a href="/src/movie_list/movie-list.html" menu-close class="sidebar-link">Frances</a>
+        </div>
+
+        <div class="siderbar-footer">
+          <p class="Copyright">
+            Diseño html y css: <a href="https://www.youtube.com/@codewithsadee">
+              codewithsadee and
+              HeiderHDev(modificaciones) </a>
+          </p>
+
+          <img src="/src/assets/tmdb-logo.png" width="130px" height="17" alt="The Movie Database Logo">
+
+
+        </div>
+
+
+
+
 
       </div>
+    </nav>
 
-      <div class="sidebar-list">
-        <p class="title">Lenguaje</p>
-        <a href="/src/movie_list/movie-list.html" menu-close class="sidebar-link">Español</a>
-        <a href="/src/movie_list/movie-list.html" menu-close class="sidebar-link">Ingles</a>
-        <a href="/src/movie_list/movie-list.html" menu-close class="sidebar-link">Frances</a>
-      </div>
+    <div class="overlay" overlay menu-toggler></div>
 
-      <div class="siderbar-footer">
-        <p class="Copyright">
-          Diseño html y css: <a href="https://www.youtube.com/@codewithsadee">
-            codewithsadee and
-            HeiderHDev(modificaciones) </a>
-        </p>
+    <article class="container" page-content>
 
-        <img src="/src/assets/tmdb-logo.png" width="130px" height="17" alt="The Movie Database Logo">
+      <!-- BANNER -->
+      <section class="banner" aria-label="popular movies">
+        <div class="banner-slider">
+          <div class="slider-item active" slider-item>
+            <img src="/src/assets/slider-banner.jpg" alt="Puss in bots: The last Wish" class="img-cover"
+              loading="eager">
 
+            <div class="banner-content">
+              <h2 class="heading">
+                Puss in Boots: The last Wish
+              </h2>
+              <div class="meta-list">
+                <div class="meta-item">2022</div>
+                <div class="meta-item card-badge">7.5</div>
+              </div>
+              <p class="genre">Animacion, Accion, Aventura</p>
+              <p class="banner-text">
+                El Gato con Botas descubre que su pasión por la aventura le ha pasado factura: Ha agotado ocho de sus
+                nueve vidas.
 
-      </div>
-
-
-
-
-
-    </div>
-  </nav>
-
-  
-  <div class="overlay" overlay menu-toggler></div>
-
-  <article class="container" page-content>
-
-    <!-- BANNER -->
-
-    <section class="banner" aria-label="popular movies">
-      <div class="banner-slider">
-        <div class="slider-item active" slider-item>
-          <img src="/src/assets/slider-banner.jpg" alt="Puss in bots: The last Wish" class="img-cover" loading="eager">
-
-          <div class="banner-content">
-            <h2 class="heading">
-              Puss in Boots: The last Wish
-            </h2>
-            <div class="meta-list">
-              <div class="meta-item">2022</div>
-              <div class="meta-item card-badge">7.5</div>
+                El Gato con Botas se embarca en un viaje épico para encontrar al mítico Último Deseo y recuperar sus
+                nueve vidas.
+              </p>
+              <a href="/src/movie_details/movie-details.html" class="btn">
+                <img src="/src/assets/play_circle.png" width="24" height="24" aria-hidden="true" alt="play circle">
+                <span class="span">Reproducir ahora</span>
+              </a>
             </div>
-            <p class="genre">Animacion, Accion, Aventura</p>
-            <p class="banner-text">
-              El Gato con Botas descubre que su pasión por la aventura le ha pasado factura: Ha agotado ocho de sus nueve vidas.
+          </div>
 
-              El Gato con Botas se embarca en un viaje épico para encontrar al mítico Último Deseo y recuperar sus nueve vidas.
-            </p>
-            <a href="/src/movie_details/movie-details.html" class="btn">
-              <img src="/src/assets/play_circle.png" width="24" height="24" aria-hidden="true" alt="play circle">
-              <span class="span">Reproducir ahora</span>
-            </a>
+
+        </div>
+
+        <div class="slider-control">
+          <div class="control-inner">
+            <!-- <button class="poster-box slider-item active">
+          <img src="/src/assets/slider-control.jpg" alt="Slide to Puss in Boots: The Last Wish" loading="lazy"
+            draggable="false" class="img-cover">
+        </button> -->
+
           </div>
         </div>
-        
+      </section>
 
-      </div>
-
-      <div class="slider-control">
-        <div class="control-inner">
-          <!-- <button class="poster-box slider-item active">
-            <img src="/src/assets/slider-control.jpg" alt="Slide to Puss in Boots: The Last Wish" loading="lazy"
-              draggable="false" class="img-cover">
-          </button> -->
-          
+      <section class="movie-list" aria-label="upcoming movie">
+        <div class="title-wrapper">
+          <h3 class="title-large">Trending Movies</h3>
         </div>
-      </div>
-    </section>
 
-    <!-- 
-      Movie List
-     -->
+        <div class="slider-list">
+          <div class="slider-inner">
+            <!-- <div class="movie-card">
+          <figure class="poster-box card-banner">
+            <img src="/src/assets/slider-control.jpg" alt="Puss in Boots: The Last Wish" 
+            class="img-cover">
+          </figure>
 
-    <section class="movie-list" aria-label="upcoming movie">
-      <div class="title-wrapper">
-        <h3 class="title-large">Trending Movies</h3>
-      </div>
+          <h4 class="title">Puss in Boots: The Last Wish</h4>
 
-      <div class="slider-list">
-        <div class="slider-inner">
-          <!-- <div class="movie-card">
-            <figure class="poster-box card-banner">
-              <img src="/src/assets/slider-control.jpg" alt="Puss in Boots: The Last Wish" 
-              class="img-cover">
-            </figure>
-
-            <h4 class="title">Puss in Boots: The Last Wish</h4>
-
-            <div class="meta-list">
-              <div class="meta-item">
-                <img src="/src/assets/star.png" width="24" height="24" 
-                loading="lazy" alt="rating">
-                <span class="span">8.4</span>
-              </div>
-
-              <div class="card-badge">2022</div>
+          <div class="meta-list">
+            <div class="meta-item">
+              <img src="/src/assets/star.png" width="24" height="24" 
+              loading="lazy" alt="rating">
+              <span class="span">8.4</span>
             </div>
 
-            <a href="/src/movie_details/movie-details.html" class="card-btn" title="Puss in
-            Boots: The Last Wish"></a>
-          </div> -->
+            <div class="card-badge">2022</div>
+          </div>
 
+          <a href="/src/movie_details/movie-details.html" class="card-btn" title="Puss in
+          Boots: The Last Wish"></a>
+        </div> -->
+
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="movie-list" id="trending-today" aria-label="upcoming movie">
-      <div class="title-wrapper">
-        <h3 class="title-large">Upcoming Movies</h3>
-      </div>
+      <section class="movie-list" id="trending-today" aria-label="upcoming movie">
+        <div class="title-wrapper">
+          <h3 class="title-large">Upcoming Movies</h3>
+        </div>
 
-      <div class="slider-list">
-        <div class="slider-inner">
-          <!-- <div class="movie-card">
-            <figure class="poster-box card-banner">
-              <img src="/src/assets/slider-control.jpg" alt="Puss in Boots: The Last Wish" 
-              class="img-cover">
-            </figure>
+        <div class="slider-list">
+          <div class="slider-inner">
+            <!-- <div class="movie-card">
+          <figure class="poster-box card-banner">
+            <img src="/src/assets/slider-control.jpg" alt="Puss in Boots: The Last Wish" 
+            class="img-cover">
+          </figure>
 
-            <h4 class="title">Puss in Boots: The Last Wish</h4>
+          <h4 class="title">Puss in Boots: The Last Wish</h4>
 
-            <div class="meta-list">
-              <div class="meta-item">
-                <img src="/src/assets/star.png" width="24" height="24" 
-                loading="lazy" alt="rating">
-                <span class="span">8.4</span>
-              </div>
-
-              <div class="card-badge">2022</div>
+          <div class="meta-list">
+            <div class="meta-item">
+              <img src="/src/assets/star.png" width="24" height="24" 
+              loading="lazy" alt="rating">
+              <span class="span">8.4</span>
             </div>
 
-            <a href="/src/movie_details/movie-details.html" class="card-btn" title="Puss in
-            Boots: The Last Wish"></a>
-          </div> -->
+            <div class="card-badge">2022</div>
+          </div>
 
+          <a href="/src/movie_details/movie-details.html" class="card-btn" title="Puss in
+          Boots: The Last Wish"></a>
+        </div> -->
+
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="movie-list" id="top-rated" aria-label="upcoming movie">
-      <div class="title-wrapper">
-        <h3 class="title-large">Top Rated Movies</h3>
-      </div>
+      <section class="movie-list" id="top-rated" aria-label="upcoming movie">
+        <div class="title-wrapper">
+          <h3 class="title-large">Top Rated Movies</h3>
+        </div>
 
-      <div class="slider-list">
-        <div class="slider-inner">
-          <!-- <div class="movie-card">
-            <figure class="poster-box card-banner">
-              <img src="/src/assets/slider-control.jpg" alt="Puss in Boots: The Last Wish" 
-              class="img-cover">
-            </figure>
+        <div class="slider-list">
+          <div class="slider-inner">
+            <!-- <div class="movie-card">
+          <figure class="poster-box card-banner">
+            <img src="/src/assets/slider-control.jpg" alt="Puss in Boots: The Last Wish" 
+            class="img-cover">
+          </figure>
 
-            <h4 class="title">Puss in Boots: The Last Wish</h4>
+          <h4 class="title">Puss in Boots: The Last Wish</h4>
 
-            <div class="meta-list">
-              <div class="meta-item">
-                <img src="/src/assets/star.png" width="24" height="24" 
-                loading="lazy" alt="rating">
-                <span class="span">8.4</span>
-              </div>
-
-              <div class="card-badge">2022</div>
+          <div class="meta-list">
+            <div class="meta-item">
+              <img src="/src/assets/star.png" width="24" height="24" 
+              loading="lazy" alt="rating">
+              <span class="span">8.4</span>
             </div>
 
-            <a href="/src/movie_details/movie-details.html" class="card-btn" title="Puss in
-            Boots: The Last Wish"></a>
-          </div> -->
+            <div class="card-badge">2022</div>
+          </div>
 
+          <a href="/src/movie_details/movie-details.html" class="card-btn" title="Puss in
+          Boots: The Last Wish"></a>
+        </div> -->
+
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-  </article>
+    </article>
+
+  </main>
+
 
   <script type="module" src="/main.js"></script>
 </body>
