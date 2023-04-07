@@ -1,7 +1,7 @@
 const API_KEY = import.meta.env.VITE_API_KEY;
 
-const categoriaLocalStorage = 'categoria_id_pelicula'
-const categoriaNameLocalStorage = 'categoria_nombre_pelicula'
+const categoriaLocalStorage = 'id de la categoria'
+const categoriaNameLocalStorage = 'nombre de la categoria'
 export const getCategoriesPreview = async () => {
   try {
     const res = await fetch(
@@ -12,11 +12,8 @@ export const getCategoriesPreview = async () => {
     const categories = data.genres;
     // console.log({ data, categories });
 
-    
-
     const categoriesPreviewMoviesContainer =
       document.querySelector("#sidebar-list2");
-
 
     categories.forEach((category) => {
       const categoriesMoviesConteiner = document.createElement("div");
@@ -28,8 +25,6 @@ export const getCategoriesPreview = async () => {
       categoriesMovies.setAttribute("menu-close", "");
       categoriesMovies.setAttribute('id', category.id);
 
-      
-      
       categoriesMovies.addEventListener("click", ()=>{
         
         const categoriaId = `${category.id}`;
@@ -38,20 +33,12 @@ export const getCategoriesPreview = async () => {
         localStorage.setItem(categoriaNameLocalStorage, categoriaName )
         
       });
-      
-      
-      
-      
-      
-      
+
       categoriesMovies.textContent = `${category.name}`;
 
       categoriesMoviesConteiner.appendChild(categoriesMovies);
       categoriesPreviewMoviesContainer.appendChild(categoriesMoviesConteiner);
     });
-
-    
-
     
   }catch (error) {
     console.error(error);
