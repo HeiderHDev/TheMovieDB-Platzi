@@ -1,23 +1,18 @@
-
-
-export const getTrendingMoviesPreview = async () => {
-    const res = await fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${import.meta.env.VITE_API_KEY}`);
+export const getUpcomingMoviesPreview = async () => {
+    const res = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${import.meta.env.VITE_API_KEY}`);
     const data = await res.json();
 
     const movies = data.results;
-    // console.log({data, movies});
 
-    const trendingPreviewMoviesContainer = document.querySelector('.movie-list .slider-list .slider-inner');
+    const upcomingPreviewMoviesContainer = document.querySelector('#trending-today .slider-list .slider-inner');
 
     movies.forEach(movie => {
-
         const movieContainer = document.createElement('div');
         movieContainer.classList.add('movie-card');
 
         const movieFigure = document.createElement('figure');
         movieFigure.classList.add('poster-box');
         movieFigure.classList.add('card-banner');
-
 
         const movieImg = document.createElement('img');
         movieImg.classList.add('img-cover');
@@ -53,7 +48,6 @@ export const getTrendingMoviesPreview = async () => {
         starRating.classList.add('span');
         starRating.textContent = `${movie.vote_average}`;
 
-
         const yearContainer = document.createElement('div');
         yearContainer.classList.add('card-badge');
         yearContainer.textContent = `${movie.release_date}`;
@@ -67,14 +61,12 @@ export const getTrendingMoviesPreview = async () => {
         linkCardBtn.setAttribute('title', movie.title);
 
         movieContainer.appendChild(linkCardBtn);
-        
+
         movieFigure.appendChild(movieImg);
-        movieContainer.appendChild(movieFigure); 
+        movieContainer.appendChild(movieFigure);
         movieContainer.appendChild(titleMovie);
         movieContainer.appendChild(starItem);
         movieContainer.appendChild(yearContainer);
-        trendingPreviewMoviesContainer.appendChild(movieContainer);
+        upcomingPreviewMoviesContainer.appendChild(movieContainer);
     });
-
-
 }

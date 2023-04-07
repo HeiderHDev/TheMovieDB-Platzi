@@ -91,7 +91,7 @@ export const getMoviesPopular = async () => {
           genreMovie.textContent = `Género: ${genreString}`;
         })
         .catch((error) => console.error(error));
-
+ 
       bannerContentMovies.appendChild(genreMovie);
 
       const overviewMovie = document.createElement("p");

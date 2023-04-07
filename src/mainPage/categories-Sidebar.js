@@ -1,16 +1,22 @@
 const API_KEY = import.meta.env.VITE_API_KEY;
 
+const categoriaLocalStorage = 'categoria_id_pelicula'
+const categoriaNameLocalStorage = 'categoria_nombre_pelicula'
 export const getCategoriesPreview = async () => {
   try {
     const res = await fetch(
       `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&language=es`
+      
     );
     const data = await res.json();
     const categories = data.genres;
     // console.log({ data, categories });
 
+    
+
     const categoriesPreviewMoviesContainer =
       document.querySelector("#sidebar-list2");
+
 
     categories.forEach((category) => {
       const categoriesMoviesConteiner = document.createElement("div");
@@ -20,15 +26,44 @@ export const getCategoriesPreview = async () => {
       categoriesMovies.classList.add("sidebar-link");
       categoriesMovies.setAttribute("href", "/src/movie_list/movie-list.html");
       categoriesMovies.setAttribute("menu-close", "");
+      categoriesMovies.setAttribute('id', category.id);
+
+      
+      
+      categoriesMovies.addEventListener("click", ()=>{
+        
+        const categoriaId = `${category.id}`;
+        const categoriaName = `${category.name}`;
+        localStorage.setItem(categoriaLocalStorage, categoriaId);
+        localStorage.setItem(categoriaNameLocalStorage, categoriaName )
+        
+      });
+      
+      
+      
+      
+      
+      
       categoriesMovies.textContent = `${category.name}`;
 
       categoriesMoviesConteiner.appendChild(categoriesMovies);
       categoriesPreviewMoviesContainer.appendChild(categoriesMoviesConteiner);
     });
+
+    
+
+    
   }catch (error) {
     console.error(error);
     }
 };
+
+export default{
+  categoriaLocalStorage,
+  categoriaNameLocalStorage
+} 
+
+// export default categoriaNameLocalStorage;
 
 const addEventonElements = (elementos, TipodeEvento, callback) => {
   for (const elem of elementos) {
