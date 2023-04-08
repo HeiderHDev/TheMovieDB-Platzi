@@ -8,6 +8,8 @@ import { search } from "../searchbox/search.js";
 import movieIdLocalStorage from "../mainPage/utils.js";
 import { getMoviesRecommendations } from "./movieRecommendations.js";
 
+import '../assets/star.png';
+
 getCategoriesPreview();
 toggleSidebar();
 search();
