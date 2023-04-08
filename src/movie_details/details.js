@@ -142,7 +142,8 @@ export const getDetailsMovie = async () => {
   } catch (error) {
     console.error(error);
   }
+  getMoviesRecommendations();
 };
 
 getDetailsMovie();
-getMoviesRecommendations();
+
