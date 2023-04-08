@@ -861,11 +861,11 @@ p#listName.listName {
 
   /* Home page */
   .header{
-    padding: 28px 56px;
+    padding: 0px 56px;
   }
 
   .logo img{
-    width: 160px;
+    width: 120px;
   }
 
   /* .menu-btn,
