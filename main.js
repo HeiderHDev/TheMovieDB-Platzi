@@ -8,8 +8,6 @@ import { getUpcomingMoviesPreview } from './src/mainPage/UpcomingMovies.js';
 import { getTopRatedMoviesPreview } from './src/mainPage/topRatedMovies.js';
 import { search } from './src/searchbox/search.js';
 
-import './src/assets/star.png';
-
 
 getTrendingMoviesPreview();
 getCategoriesPreview();

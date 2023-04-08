@@ -6,7 +6,6 @@ import categoria, {
 } from "../mainPage/categories-Sidebar.js";
 import { search } from "../searchbox/search.js";
 import { createMovies } from "../mainPage/utils.js";
-import '../assets/star.png';
 
 getCategoriesPreview();
 toggleSidebar();

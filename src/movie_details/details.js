@@ -8,7 +8,7 @@ import { search } from "../searchbox/search.js";
 import movieIdLocalStorage from "../mainPage/utils.js";
 import { getMoviesRecommendations } from "./movieRecommendations.js";
 
-import '../assets/star.png';
+import image from '../assets/star.png';
 
 getCategoriesPreview();
 toggleSidebar();
@@ -82,7 +82,7 @@ export const getDetailsMovie = async () => {
           <div class="meta-list">
             <div class="meta-item">
               <img
-                src="/src/assets/star.png"
+                src="${image}"
                 width="20"
                 height="20"
                 alt="rating"
