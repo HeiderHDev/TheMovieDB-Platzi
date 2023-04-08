@@ -672,6 +672,11 @@ body{
 
 /* Detail Page */
 
+p#listName.listName {
+  padding-left: 45px;
+  
+}
+
 .backdrop-image{
   position: absolute;
   top: 0;

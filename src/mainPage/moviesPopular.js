@@ -1,5 +1,5 @@
 const API_KEY = import.meta.env.VITE_API_KEY;
-
+const movieIdLocalStorage = 'Id de la pelicula';
 export const getMoviesPopular = async () => {
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=es&page=1`
@@ -103,6 +103,10 @@ export const getMoviesPopular = async () => {
       const btnMovieReprod = document.createElement('a');
       btnMovieReprod.classList.add('btn');
       btnMovieReprod.setAttribute('href', '/src/movie_details/movie-details.html');
+      btnMovieReprod.addEventListener("click", () => {
+        const movieId = `${moviePopular.id}`;
+        localStorage.setItem(movieIdLocalStorage, movieId);
+      });
 
       const imgMovieReprod = document.createElement('img');
       imgMovieReprod.setAttribute('src', '/src/assets/play_circle.png');
@@ -127,3 +131,5 @@ export const getMoviesPopular = async () => {
     });
   });
 };
+
+export default movieIdLocalStorage;

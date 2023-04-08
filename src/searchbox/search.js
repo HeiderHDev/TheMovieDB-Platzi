@@ -54,18 +54,10 @@ export function search() {
           searchMovieList.appendChild(searchgridList);
           searchResultModal.appendChild(searchMovieList);
 
-
-
-          
-
           createMovies(buscadorMovies, searchgridList);
 
-          
-        
-          
-
         } catch (error) {
-          searchResultModal.innerHTML = 'Something went wrong';
+          searchResultModal.innerHTML = 'Algo salió mal';
           console.log(error);
         }
       };
