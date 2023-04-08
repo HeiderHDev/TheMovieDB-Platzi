@@ -319,7 +319,7 @@ body{
 
 .header{
   position: relative;
-  padding-block: 24px;
+  padding-block: 0px;
   padding-inline: 16px;
   display: flex;
   justify-content: space-between;
@@ -868,10 +868,10 @@ p#listName.listName {
     width: 120px;
   }
 
-  /* .menu-btn,
+  .menu-btn,
   .overlay{
     display: none;
-  } */
+  }
 
   
 
