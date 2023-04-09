@@ -1,5 +1,5 @@
 const movieIdLocalStorage = 'Id de la pelicula';
-import image from '../assets/star.png'; 
+import imgUrl from '../assets/star.png'; 
 
 export function createMovies(movies, container) {
   movies.forEach((movie) => {
@@ -33,7 +33,8 @@ export function createMovies(movies, container) {
     const starImg = document.createElement("img");
     starImg.setAttribute("alt", "rating");
     starImg.setAttribute("loading", "lazy");
-    starImg.setAttribute("src", `${image}`);
+    starImg.setAttribute("src", imgUrl);
+
     starImg.width = 24;
     starImg.height = 24;
 
